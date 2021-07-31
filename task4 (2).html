@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Task 4</title>
+        <h1 style ="color:darkorange;"> FORM FOR MOVIES </h1><style> 
+        table, th, td 
+        {
+            border: 1px solid black;
+        }
+        th, td 
+        {
+            padding: 15px;
+        }
+        #t01
+        {
+            width: 70%;    
+            background-color: peachpuff;
+        }
+        
+        body 
+        {
+            background-image: url("https://www.teahub.io/photos/full/220-2205714_get-the-latest-movies-data-src-kodi-tv.jpg");
+            opacity: 0.9;
+            background-repeat: no-repeat;
+        }
+        input[type=text] 
+        {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+
+        </style>
+
+
+        <script>
+            
+            function calc()
+            {
+                var name = document.getElementById('name').value;
+                var rate = document.getElementById('rate').value;
+                  
+                  var table = document.getElementsByTagName('table')[0];
+                  
+                  var newRow = table.insertRow(table.rows.length/2+1);
+                  
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  
+                  cel1.innerHTML = name;
+                  cel2.innerHTML = rate;
+            }
+            
+        </script>
+    </head>
+    <body>
+   
+        <form>
+            <label for="name"><h2 style="color: white;">MOVIE NAME:</h2></label>
+            <input type="text" name="name" id="name" placeholder="Name of the movie">/>  
+            <label for="rate"><h2 style="color: white;">IMDB RATING:</h2></label>
+            <input type="text" name="rate" id="rate" placeholder="Rating of the movie"/><br/><br/>
+        </form>
+
+        <button onclick="calc();">SUBMIT</button><br/><br/>
+
+        <table id="t01">    
+            <tr>
+                <th>MOVIE  NAME</th>
+                <th>RATING</th>
+            </tr>        
+        </table>
+ 
+    </body>
+</html>
